@@ -1,0 +1,9 @@
+.componentParticlesWrapper {
+	position: relative;
+}
+
+.particlesCanvassWrapper {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+}
