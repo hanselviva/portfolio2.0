@@ -1,10 +1,10 @@
 const particlesParams = {
 	particles: {
 		number: {
-			value: 100,
+			value: 80,
 			density: {
 				enable: false,
-				value_area: 5500,
+				value_area: 800,
 			},
 		},
 		color: {
@@ -27,16 +27,16 @@ const particlesParams = {
 		},
 		opacity: {
 			value: 0.5,
-			random: false,
+			random: true,
 			anim: {
-				enable: false,
+				enable: true,
 				speed: 1,
 				opacity_min: 0.1,
 				sync: false,
 			},
 		},
 		size: {
-			value: 3,
+			value: 5,
 			random: true,
 			anim: {
 				enable: false,
@@ -46,17 +46,17 @@ const particlesParams = {
 			},
 		},
 		line_linked: {
-			enable: true,
-			distance: 150,
+			enable: false,
+			distance: 500,
 			color: "#ffffff",
 			opacity: 0.4,
-			width: 1,
+			width: 2,
 		},
 		move: {
 			enable: true,
-			speed: 0.5,
-			direction: "none",
-			random: false,
+			speed: 1,
+			direction: "left",
+			random: true,
 			straight: false,
 			out_mode: "out",
 			bounce: false,
@@ -72,30 +72,30 @@ const particlesParams = {
 		events: {
 			onhover: {
 				enable: true,
-				mode: "grab",
+				mode: "repulse",
 			},
 			onclick: {
 				enable: true,
-				mode: "push",
+				mode: "repulse",
 			},
 			resize: true,
 		},
 		modes: {
 			grab: {
-				distance: 200,
+				distance: 400,
 				line_linked: {
-					opacity: 1,
+					opacity: 0.5,
 				},
 			},
 			bubble: {
-				distance: 100,
-				size: 10,
-				duration: 2,
-				opacity: 0.4872463273808071,
+				distance: 400,
+				size: 5,
+				duration: 1,
+				opacity: 1,
 				speed: 3,
 			},
 			repulse: {
-				distance: 200,
+				distance: 194.89853095232283,
 				duration: 0.4,
 			},
 			push: {
