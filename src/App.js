@@ -15,9 +15,15 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 function App() {
 	return (
 		<React.Fragment>
-			<div className="App">
-				<CssBaseline />
-				<BrowserRouter>
+			<BrowserRouter>
+				<div className="App">
+					<CssBaseline />
+					<Home />
+					<About />
+					<Resume />
+					<Projects />
+					<ContactTemp />
+					{/* 
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/about" component={About} />
@@ -25,8 +31,9 @@ function App() {
 						<Route exact path="/projects" component={Projects} />
 						<Route exact path="/contact" component={ContactTemp} />
 					</Switch>
-				</BrowserRouter>
-			</div>
+				*/}
+				</div>
+			</BrowserRouter>
 		</React.Fragment>
 	);
 }

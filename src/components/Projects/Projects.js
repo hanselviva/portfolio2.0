@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 	mainContainer: {
 		display: "flex",
 		textAlign: "center",
-		backgroundColor: "#29434e",
+		// backgroundColor: "#29434e",
 		height: "auto",
 		paddingTop: "2%",
 	},

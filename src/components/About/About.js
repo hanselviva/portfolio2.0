@@ -14,7 +14,7 @@ import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
 	wrapper: {
-		backgroundColor: "#102027",
+		// backgroundColor: "#102027",
 	},
 	mainContainer: {
 		height: "100vh",

@@ -12,9 +12,8 @@ import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
 	mainContainer: {
-		backgroundColor: "#1c313a",
-		overflowY: "scroll",
-		overflowX: "hidden",
+		// backgroundColor: "#1c313a",
+		overflow: "hidden",
 	},
 	timeLine: {
 		position: "relative",

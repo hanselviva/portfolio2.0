@@ -1,5 +1,10 @@
 .App {
 	text-align: center;
 	height: auto;
-	/* background-color: black; */
+	background: linear-gradient(
+		180deg,
+		rgba(0, 10, 18, 1) 0%,
+		rgba(41, 67, 78, 1) 37%,
+		rgba(98, 117, 127, 1) 100%
+	);
 }

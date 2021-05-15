@@ -13,7 +13,7 @@ import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
 	mainContainer: {
-		backgroundColor: "#34515e",
+		// backgroundColor: "#34515e",
 		height: "100vh",
 		display: "flex",
 		flexDirection: "column",
