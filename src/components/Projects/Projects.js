@@ -49,11 +49,12 @@ const projects = [
 
 const useStyles = makeStyles((theme) => ({
 	mainContainer: {
+		height: "auto",
 		display: "flex",
 		textAlign: "center",
 		// backgroundColor: "#29434e",
 		height: "auto",
-		paddingTop: "2%",
+		paddingTop: "5%",
 	},
 	title: {
 		color: theme.palette.secondary.light,
@@ -92,15 +93,15 @@ const useStyles = makeStyles((theme) => ({
 const Projects = () => {
 	const classes = useStyles();
 	return (
-		<Box className={classes.mainContainer}>
+		<Box className={classes.mainContainer} id="projects">
 			<Container maxWidth="lg">
 				<Typography className={classes.title} variant="h4">
-					<Typed strings={["Projects"]} typeSpeed={40} />
+					<Typed strings={["PROJECTS"]} typeSpeed={40} />
 				</Typography>
 
-				<Typography className={classes.content} variant="h6">
+				{/* <Typography className={classes.content} variant="h6">
 					I built/helped build the following:
-				</Typography>
+				</Typography> */}
 
 				{/* Mother Container */}
 				<Container className={classes.cardGrid} maxWidth="md">
@@ -137,7 +138,7 @@ const Projects = () => {
 					</Grid>
 				</Container>
 
-				<Grid className={classes.links} container spacing={2} justify="center">
+				{/* <Grid className={classes.links} container spacing={2} justify="center">
 					<Grid item>
 						<Link to="/">
 							<Button variant="contained" color="primary">
@@ -153,7 +154,7 @@ const Projects = () => {
 							</Button>
 						</Link>
 					</Grid>
-				</Grid>
+				</Grid> */}
 			</Container>
 		</Box>
 	);

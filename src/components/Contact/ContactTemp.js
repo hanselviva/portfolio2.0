@@ -1,6 +1,5 @@
 import React from "react";
 import Typed from "react-typed";
-import { Link } from "react-router-dom";
 //
 //
 
@@ -10,6 +9,7 @@ import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
+import VerticalAlignTopIcon from "@material-ui/icons/VerticalAlignTop";
 
 const useStyles = makeStyles((theme) => ({
 	mainContainer: {
@@ -41,10 +41,10 @@ const useStyles = makeStyles((theme) => ({
 const ContactTemp = () => {
 	const classes = useStyles();
 	return (
-		<Box className={classes.mainContainer}>
+		<Box className={classes.mainContainer} id="contactTemp">
 			<Container maxWidth="lg">
 				<Typography className={classes.title} variant="h4">
-					<Typed strings={["Contact"]} typeSpeed={40} />
+					<Typed strings={["CONTACT"]} typeSpeed={40} />
 				</Typography>
 
 				<Container>
@@ -62,11 +62,12 @@ const ContactTemp = () => {
 
 				<Grid className={classes.links} container spacing={2} justify="center">
 					<Grid item>
-						<Link to="/">
+						<a href="#home">
 							<Button variant="contained" color="primary">
-								Back to Home
+								<VerticalAlignTopIcon />
+								Back to top
 							</Button>
-						</Link>
+						</a>
 					</Grid>
 				</Grid>
 			</Container>

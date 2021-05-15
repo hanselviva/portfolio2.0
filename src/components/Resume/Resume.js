@@ -124,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
 const Resume = () => {
 	const classes = useStyles();
 	return (
-		<Box component="header" className={classes.mainContainer}>
+		<Box className={classes.mainContainer} id="resume">
 			<Typography variant="h4" align="center" className={classes.heading}>
 				<Typed strings={["Work History"]} typeSpeed={40} />
 			</Typography>
@@ -242,7 +242,7 @@ const Resume = () => {
 				</Box>
 			</Box>
 
-			<Grid className={classes.links} container spacing={2} justify="center">
+			{/* <Grid className={classes.links} container spacing={2} justify="center">
 				<Grid item>
 					<Link to="/">
 						<Button variant="contained" color="primary">
@@ -258,7 +258,7 @@ const Resume = () => {
 						</Button>
 					</Link>
 				</Grid>
-			</Grid>
+			</Grid> */}
 		</Box>
 	);
 };

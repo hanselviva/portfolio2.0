@@ -57,6 +57,7 @@ const Home = () => {
 	const classes = useStyles();
 	return (
 		<div
+			id="home"
 			className={classes.homeWrapper}
 			style={{
 				position: "relative",
@@ -97,32 +98,32 @@ const Home = () => {
 						justify="center"
 					>
 						<Grid item>
-							<Link to="/about">
+							<a href="#about">
 								<Button variant="contained" color="primary">
 									About
 								</Button>
-							</Link>
+							</a>
 						</Grid>
 						<Grid item>
-							<Link to="/resume">
+							<a href="#resume">
 								<Button variant="contained" color="primary">
 									Resume
 								</Button>
-							</Link>
+							</a>
 						</Grid>
 						<Grid item>
-							<Link to="/projects">
+							<a href="#projects">
 								<Button variant="contained" color="primary">
 									Projects
 								</Button>
-							</Link>
+							</a>
 						</Grid>
 						<Grid item>
-							<Link to="/contact">
+							<a href="#contact">
 								<Button variant="contained" color="primary">
 									Contact
 								</Button>
-							</Link>
+							</a>
 						</Grid>
 					</Grid>
 

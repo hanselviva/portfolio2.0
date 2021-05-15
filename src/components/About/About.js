@@ -11,6 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
+import VerticalAlignTopIcon from "@material-ui/icons/VerticalAlignTop";
 
 const useStyles = makeStyles((theme) => ({
 	wrapper: {
@@ -39,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
 const About = () => {
 	const classes = useStyles();
 	return (
-		<Box className={classes.wrapper}>
+		<Box className={classes.wrapper} id="about">
 			<Container className={classes.mainContainer}>
 				<Typography className={classes.title} variant="h4">
-					<Typed strings={["About"]} typeSpeed={40} />
+					<Typed strings={["ABOUT"]} typeSpeed={40} />
 				</Typography>
 
 				<Typography className={classes.content} variant="body1">
@@ -58,18 +59,7 @@ const About = () => {
 					{/* {aboutMe.interests_hobbies} */}
 				</Typography>
 
-				<Typography className={classes.title} variant="h6">
-					Hire me: <br />
-					<a
-						rel="noreferrer"
-						target="_blank"
-						href="mailto:hanselviva@gmail.com"
-					>
-						hanselviva@gmail.com{" "}
-					</a>
-				</Typography>
-
-				<Grid className={classes.links} container spacing={2} justify="center">
+				{/* <Grid className={classes.links} container spacing={2} justify="center">
 					<Grid item>
 						<Link to="/">
 							<Button variant="contained" color="primary">
@@ -84,7 +74,7 @@ const About = () => {
 							</Button>
 						</Link>
 					</Grid>
-				</Grid>
+				</Grid> */}
 			</Container>
 		</Box>
 	);
