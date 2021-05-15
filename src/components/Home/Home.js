@@ -2,23 +2,30 @@ import React from "react";
 import avatar from "./avatar.jpg";
 import Typed from "react-typed";
 import { Link } from "react-router-dom";
-import "./home.css";
 //
-//
-import Typography from "@material-ui/core/Typography";
-import Avatar from "@material-ui/core/Avatar";
-import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
 //
 import Particles from "react-particles-js";
 import particlesParams from "../../ParticlesParams/particlesParams";
 //
 //
+import Typography from "@material-ui/core/Typography";
+import Avatar from "@material-ui/core/Avatar";
+import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import Container from "@material-ui/core/Container";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import TwitterIcon from "@material-ui/icons/Twitter";
+//
+
+//
+//
 const useStyles = makeStyles((theme) => ({
-	componentContainer: {
+	homeWrapper: {
+		backgroundColor: "#000a12",
+	},
+	homeContainer: {
 		position: "absolute",
 		top: "50%",
 		left: "50%",
@@ -48,14 +55,22 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
 	const classes = useStyles();
 	return (
-		<div className="componentParticlesWrapper">
+		<div
+			className={classes.homeWrapper}
+			style={{
+				position: "relative",
+				overflow: "scroll",
+				backgroundRepeat: "repeat",
+			}}
+		>
 			<Particles
-				className="particlesCanvassWrapper"
-				canvasClassName="particlesCanvass"
+				className="particles"
+				height="100vh"
+				width="100vw"
 				params={particlesParams}
 			/>
 
-			<Box className="componentContainer">
+			<div className={classes.homeContainer}>
 				<Grid container justify="center">
 					<Avatar className={classes.avatar} src={avatar} />
 				</Grid>
@@ -80,24 +95,32 @@ const Home = () => {
 						justify="center"
 					>
 						<Grid item>
-							<Button variant="contained" color="primary">
-								About
-							</Button>
+							<Link to="/about">
+								<Button variant="contained" color="primary">
+									About
+								</Button>
+							</Link>
 						</Grid>
 						<Grid item>
-							<Button variant="contained" color="primary">
-								Resume
-							</Button>
+							<Link to="/resume">
+								<Button variant="contained" color="primary">
+									Resume
+								</Button>
+							</Link>
 						</Grid>
 						<Grid item>
-							<Button variant="contained" color="primary">
-								Projects
-							</Button>
+							<Link to="/projects">
+								<Button variant="contained" color="primary">
+									Projects
+								</Button>
+							</Link>
 						</Grid>
 						<Grid item>
-							<Button variant="contained" color="primary">
-								Contact
-							</Button>
+							<Link to="/contact">
+								<Button variant="contained" color="primary">
+									Contact
+								</Button>
+							</Link>
 						</Grid>
 					</Grid>
 
@@ -109,7 +132,7 @@ const Home = () => {
 								href="https://github.com/hanselviva"
 							>
 								<Button variant="outlined" color="primary">
-									Github
+									<GitHubIcon />
 								</Button>
 							</a>
 						</Grid>
@@ -120,7 +143,7 @@ const Home = () => {
 								href="https://www.linkedin.com/in/hanselvalentine/"
 							>
 								<Button variant="outlined" color="primary">
-									LinkedIn
+									<LinkedInIcon />
 								</Button>
 							</a>
 						</Grid>
@@ -132,14 +155,15 @@ const Home = () => {
 								href="https://twitter.com/Hanselasdfghjkl"
 							>
 								<Button variant="outlined" color="primary">
-									Twitter
+									<TwitterIcon />
 								</Button>
 							</a>
 						</Grid>
 					</Grid>
 				</Container>
-			</Box>
+			</div>
 		</div>
+		// </div>
 	);
 };
 
