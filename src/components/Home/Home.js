@@ -2,6 +2,8 @@ import React from "react";
 import avatar from "./avatar.jpg";
 import Typed from "react-typed";
 import { Link } from "react-router-dom";
+// import { Link, glide } from "react-tiger-transition";
+
 //
 //
 import Particles from "react-particles-js";
@@ -18,9 +20,17 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
 //
+import "react-tiger-transition/styles/main.min.css";
+//
+//
+// glide({
+// 	name: "glide-left",
+// });
+// glide({
+// 	name: "glide-right",
+// 	direction: "right",
+// });
 
-//
-//
 const useStyles = makeStyles((theme) => ({
 	homeWrapper: {
 		backgroundColor: "#000a12",
@@ -95,7 +105,7 @@ const Home = () => {
 						justify="center"
 					>
 						<Grid item>
-							<Link to="/about">
+							<Link to="/about" transition="glide-left">
 								<Button variant="contained" color="primary">
 									About
 								</Button>

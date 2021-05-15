@@ -5,8 +5,8 @@ const aboutMe = {
 		"Hi, there! My name is Hansel. I grow up in a small island Southeast of the Philippines. When I first touched a computer at age 11, I fell instantly love with it. The idea that a box can make a lot of difference in the world fascinated my young mind. That is why I wanted to be a developer. I want to contribute, in my own little way, to the technological progress of our generation.",
 
 	tools: [
-		"HTML | CSS | JavaScript | React | Git",
-		"Github | Photoshop | Illustrator (basic) | SEO | CMS ",
+		"HTML | CSS | JavaScript | React | Git & CLI",
+		"Github | Adobe CS | SEO | CMS | Digital Marketing ",
 	],
 
 	education:
