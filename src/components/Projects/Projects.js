@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
 		height: "100%",
 		display: "flex",
 		flexDirection: "column",
-		background: "rgba(0, 0, 0, 0.2)",
+		background: "rgba(225, 225, 225, 0.4)",
 		color: "white",
 		padding: theme.spacing(4),
 	},
