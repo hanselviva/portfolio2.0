@@ -14,33 +14,24 @@ import { Parallax } from "react-parallax";
 
 const useStyles = makeStyles((theme) => ({
 	wrapper: {
-		height: "100vh",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
 	},
 	mainContainer: {
 		// backgroundColor: "#34515e",
+		height: "100vh",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
+		position: "relative",
 	},
 	title: {
-		// color: theme.palette.secondary.light,
+		color: "white",
 		padding: theme.spacing(1),
-	},
-	content: {
-		color: theme.palette.secondary.main,
 	},
 	links: {
 		marginTop: theme.spacing(6),
-	},
-	textField: {
-		backgroundColor: theme.palette.secondary.light,
-		color: theme.palette.secondary.light,
-	},
-	submit: {
-		marginTop: theme.spacing(2),
 	},
 }));
 
@@ -52,36 +43,34 @@ const ContactTemp = () => {
 			<Parallax
 				renderLayer={(percentage) => (
 					<div>
-						<Container
-							className={classes.mainContainer}
+						<div
 							style={{
-								background: `rgba(1, 11, 19, ${percentage * 1})`,
+								background: `rgba(0, 0, 0, ${percentage * 1})`,
+								position: "absolute",
 								borderRadius: "50%",
-								width: percentage * 700,
-								height: percentage * 700,
+								left: "50%",
+								top: "50%",
+								transform: "translate(-50%,-50%)",
+								width: percentage * 600,
+								height: percentage * 600,
 							}}
-						>
-							<div
-								style={{
-									color: `rgba(255, 255, 255, ${percentage * 1})`,
-								}}
-							>
-								<Typography className={classes.title} variant="h4">
-									<Typed strings={["CONTACT"]} typeSpeed={40} />
-								</Typography>
+						/>
 
-								<Typography className={classes.title} variant="h6">
-									Let's work together! Email me at: <br />
-									<a
-										rel="noreferrer"
-										target="_blank"
-										href="mailto:hanselviva@gmail.com"
-										style={{ color: `rgba(255, 235, 205, ${percentage * 1})` }}
-									>
-										hanselviva@gmail.com{" "}
-									</a>
-								</Typography>
-							</div>
+						<Container className={classes.mainContainer}>
+							<Typography className={classes.title} variant="h4">
+								<Typed strings={["CONTACT"]} typeSpeed={40} />
+							</Typography>
+
+							<Typography className={classes.title} variant="h6">
+								Let's work together! Email me at: <br />
+								<a
+									rel="noreferrer"
+									target="_blank"
+									href="mailto:hanselviva@gmail.com"
+								>
+									hanselviva@gmail.com{" "}
+								</a>
+							</Typography>
 
 							<Grid
 								className={classes.links}

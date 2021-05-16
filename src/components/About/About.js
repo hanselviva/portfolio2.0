@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: "center",
 	},
 	mainContainer: {
-		background: `rgba(1, 11, 19, 0.9)`,
+		// background: `rgba(1, 11, 19, 0.9)`,
 		color: theme.palette.secondary.main,
 		// color: "white",
 		maxWidth: "50vw",

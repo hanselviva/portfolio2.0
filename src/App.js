@@ -13,7 +13,7 @@ import ContactTemp from "./components/Contact/ContactTemp";
 import CssBaseline from "@material-ui/core/CssBaseline";
 //
 import { Parallax } from "react-parallax";
-import bg from "./bg.png";
+import bg from "./bg2.svg";
 //
 function App() {
 	return (
@@ -22,13 +22,11 @@ function App() {
 				<div className="App">
 					<CssBaseline />
 
-					<Parallax bgImage={bg} strength={800}>
-						<Home />
-						<About />
-						<Resume />
-						<Projects />
-						<ContactTemp />
-					</Parallax>
+					<Home />
+					<About />
+					<Resume />
+					<Projects />
+					<ContactTemp />
 
 					{/* 
 						<Switch>

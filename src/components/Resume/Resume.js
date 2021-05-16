@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
 		// backgroundColor: "#1c313a",
 		overflow: "hidden",
 		maxWidth: "80vw",
-		background: `rgba(1, 11, 19, 0.9)`,
 	},
 	timeLine: {
 		position: "relative",

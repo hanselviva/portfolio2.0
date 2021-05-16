@@ -18,7 +18,7 @@ const projects = [
 	{
 		name: "Make-your-own Pizza",
 		image:
-			"https://cdn.pixabay.com/photo/2020/03/25/21/05/pizza-4968645_960_720.jpg",
+			"https://cdn.pixabay.com/photo/2017/12/05/20/10/pizza-3000285_960_720.png",
 		description:
 			"This is my first ever functioning web app deployed which is focus on React fundamentals and JS functions. This is complete from Form Management and Validation to routing, post requests, and even cypress testing. The basic styling is added for comprehensibility purposes.",
 		role: "Personal Project",
@@ -29,7 +29,7 @@ const projects = [
 	{
 		name: "Water My Plants",
 		image:
-			"https://cdn.pixabay.com/photo/2018/06/12/09/19/plant-3470173_960_720.jpg",
+			"https://cdn.pixabay.com/photo/2018/03/02/09/19/flower-marigolds-3192686_960_720.png",
 		description:
 			"Built alongside a team of Lambda School Web Development students. 'Water My Plants' will remind users when it's time to water their plants. The app is complete from frontend to backend functionalities.",
 		role: "Front-end, built the components with form management and validations",
@@ -38,7 +38,8 @@ const projects = [
 	},
 	{
 		name: "React Portfolio",
-		image: "https://reactjs.org/logo-og.png",
+		image:
+			"https://cdn.pixabay.com/photo/2017/05/12/15/16/hexagon-2307348_960_720.png",
 		description: "this.portfolio is built with React.js and Material-UI",
 		role: "Personal Project",
 		demo: "https://hansel.xyz",
@@ -55,15 +56,11 @@ const useStyles = makeStyles((theme) => ({
 		maxWidth: "70vw",
 	},
 	mainContainer: {
-		background: `rgba(1, 11, 19, 0.9)`,
 		paddingBottom: "5%",
 	},
 	title: {
 		color: theme.palette.secondary.light,
 		paddingTop: theme.spacing(4),
-	},
-	content: {
-		color: theme.palette.secondary.main,
 	},
 	links: {
 		marginTop: theme.spacing(1),
@@ -82,6 +79,9 @@ const useStyles = makeStyles((theme) => ({
 		height: "100%",
 		display: "flex",
 		flexDirection: "column",
+		background: "rgba(0, 0, 0, 0.2)",
+		color: "white",
+		padding: theme.spacing(4),
 	},
 	cardMedia: {
 		paddingTop: "56.25%", // 16:9
