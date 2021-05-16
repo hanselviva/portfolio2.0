@@ -45,7 +45,7 @@ const ContactTemp = () => {
 					<div>
 						<div
 							style={{
-								background: `rgba(28, 49, 58, ${percentage * 1})`,
+								background: `rgba(58, 102, 120, ${percentage * 1})`,
 								position: "absolute",
 								borderRadius: "50%",
 								left: "50%",

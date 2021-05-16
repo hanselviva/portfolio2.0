@@ -14,19 +14,22 @@ import Box from "@material-ui/core/Box";
 //
 //
 
+import htmlImg from "./html1.png";
+import cssImg from "./css2.png";
+import jsImg from "./js2.png";
+import { Card, CardMedia, Grid } from "@material-ui/core";
+import { Parallax } from "react-parallax";
+
 const useStyles = makeStyles((theme) => ({
 	wrapper: {
 		minHeight: "100vh",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
+		alignItems: "center",
 	},
 	mainContainer: {
-		// background: `rgba(1, 11, 19, 0.9)`,
 		color: theme.palette.secondary.main,
-		// color: "white",
-		minWidth: "90vw",
-		maxWidth: "50vw",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
@@ -41,6 +44,16 @@ const useStyles = makeStyles((theme) => ({
 	links: {
 		marginTop: theme.spacing(1),
 	},
+	mediaContainer: {
+		display: "flex",
+		flexDirection: "row",
+		justifyContent: "space-evenly",
+		width: "25vw",
+	},
+	// media: {
+	// 	height: "200px",
+	// 	width: "150px",
+	// },
 }));
 
 const About = () => {
@@ -58,6 +71,41 @@ const About = () => {
 					{aboutMe.tools[1]} <br /> <br />
 				</Typography>
 			</Container>
+
+			<Parallax
+				renderLayer={(percentage) => (
+					<Container className={classes.mediaContainer}>
+						<CardMedia
+							className={classes.media}
+							image={htmlImg}
+							style={{
+								height: `${percentage * 150}px`,
+								width: "100px",
+								// width: `${percentage * 100}px`,
+								opacity: `${percentage * 1.5}`,
+							}}
+						/>
+						<CardMedia
+							image={cssImg}
+							style={{
+								height: `${percentage * 150}px`,
+								width: "100px",
+								// width: `${percentage * 100}px`,
+								opacity: `${percentage * 1.5}`,
+							}}
+						/>
+						<CardMedia
+							image={jsImg}
+							style={{
+								height: `${percentage * 150}px`,
+								width: "100px",
+								// width: `${percentage * 100}px`,
+								opacity: `${percentage * 1.5}`,
+							}}
+						/>
+					</Container>
+				)}
+			></Parallax>
 		</Box>
 	);
 };

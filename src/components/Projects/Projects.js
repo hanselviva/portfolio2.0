@@ -22,7 +22,7 @@ const projects = [
 		name: "React Portfolio",
 		image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
 		description:
-			"this.portfolio is a highly responsive website built with React.js, Material-UI and react-parallax.",
+			"this.portfolio is a highly responsive website built with React.js, react-particles, Material-UI and react-parallax.",
 		role: "Personal Project",
 		demo: "https://hansel.xyz",
 		code: "https://github.com/hanselviva/portfolio",
@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "space-around",
-		color: "white",
+		color: "#000A12",
 		padding: theme.spacing(4),
 		minHeight: "70vh",
 	},
