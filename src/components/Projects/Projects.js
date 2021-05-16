@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "space-around",
-		color: "#000A12",
+		color: "#cfd8dc",
 		padding: theme.spacing(4),
 		minHeight: "70vh",
 	},

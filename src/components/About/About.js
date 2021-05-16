@@ -40,20 +40,17 @@ const useStyles = makeStyles((theme) => ({
 	},
 	content: {
 		textAlign: "center",
-	},
-	links: {
-		marginTop: theme.spacing(1),
+		paddingTop: theme.spacing(3),
+		paddingBottom: theme.spacing(3),
 	},
 	mediaContainer: {
 		display: "flex",
 		flexDirection: "row",
-		justifyContent: "space-evenly",
-		width: "25vw",
+		justifyContent: "center",
 	},
-	// media: {
-	// 	height: "200px",
-	// 	width: "150px",
-	// },
+	media: {
+		margin: theme.spacing(1),
+	},
 }));
 
 const About = () => {
@@ -67,45 +64,50 @@ const About = () => {
 
 				<Typography className={classes.content} variant="h6">
 					{aboutMe.biography} <br /> <br />
+				</Typography>
+
+				<Parallax
+					renderLayer={(percentage) => (
+						<Container className={classes.mediaContainer}>
+							<CardMedia
+								className={classes.media}
+								image={htmlImg}
+								style={{
+									height: `${percentage * 150}px`,
+									width: "100px",
+									// width: `${percentage * 100}px`,
+									opacity: `${percentage * 1.5}`,
+								}}
+							/>
+							<CardMedia
+								className={classes.media}
+								image={cssImg}
+								style={{
+									height: `${percentage * 150}px`,
+									width: "100px",
+									// width: `${percentage * 100}px`,
+									opacity: `${percentage * 1.5}`,
+								}}
+							/>
+							<CardMedia
+								className={classes.media}
+								image={jsImg}
+								style={{
+									height: `${percentage * 150}px`,
+									width: "100px",
+									// width: `${percentage * 100}px`,
+									opacity: `${percentage * 1.5}`,
+								}}
+							/>
+						</Container>
+					)}
+				></Parallax>
+
+				<Typography className={classes.content} variant="h6">
 					{aboutMe.tools[0]} <br />
 					{aboutMe.tools[1]} <br /> <br />
 				</Typography>
 			</Container>
-
-			<Parallax
-				renderLayer={(percentage) => (
-					<Container className={classes.mediaContainer}>
-						<CardMedia
-							className={classes.media}
-							image={htmlImg}
-							style={{
-								height: `${percentage * 150}px`,
-								width: "100px",
-								// width: `${percentage * 100}px`,
-								opacity: `${percentage * 1.5}`,
-							}}
-						/>
-						<CardMedia
-							image={cssImg}
-							style={{
-								height: `${percentage * 150}px`,
-								width: "100px",
-								// width: `${percentage * 100}px`,
-								opacity: `${percentage * 1.5}`,
-							}}
-						/>
-						<CardMedia
-							image={jsImg}
-							style={{
-								height: `${percentage * 150}px`,
-								width: "100px",
-								// width: `${percentage * 100}px`,
-								opacity: `${percentage * 1.5}`,
-							}}
-						/>
-					</Container>
-				)}
-			></Parallax>
 		</Box>
 	);
 };
