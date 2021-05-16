@@ -12,8 +12,6 @@ import ContactTemp from "./components/Contact/ContactTemp";
 //
 import CssBaseline from "@material-ui/core/CssBaseline";
 //
-import { Parallax } from "react-parallax";
-import bg from "./bg2.svg";
 //
 function App() {
 	return (

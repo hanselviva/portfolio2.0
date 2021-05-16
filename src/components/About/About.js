@@ -10,10 +10,13 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
+//
+//
+//
 
 const useStyles = makeStyles((theme) => ({
 	wrapper: {
-		height: "100vh",
+		minHeight: "100vh",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
@@ -22,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
 		// background: `rgba(1, 11, 19, 0.9)`,
 		color: theme.palette.secondary.main,
 		// color: "white",
+		minWidth: "90vw",
 		maxWidth: "50vw",
 		display: "flex",
 		flexDirection: "column",

@@ -45,14 +45,14 @@ const ContactTemp = () => {
 					<div>
 						<div
 							style={{
-								background: `rgba(0, 10, 18, ${percentage * 1})`,
+								background: `rgba(28, 49, 58, ${percentage * 1})`,
 								position: "absolute",
 								borderRadius: "50%",
 								left: "50%",
 								top: "50%",
 								transform: "translate(-50%,-50%)",
-								width: percentage * 600,
-								height: percentage * 600,
+								width: percentage * 700,
+								height: percentage * 700,
 							}}
 						/>
 

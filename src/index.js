@@ -5,7 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import { ParallaxProvider } from "react-scroll-parallax";
 
 const theme = createMuiTheme({
 	palette: {
@@ -29,9 +28,7 @@ const theme = createMuiTheme({
 
 ReactDOM.render(
 	<ThemeProvider theme={theme}>
-		<ParallaxProvider>
-			<App />
-		</ParallaxProvider>
+		<App />
 	</ThemeProvider>,
 	document.getElementById("root"),
 );

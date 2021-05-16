@@ -9,13 +9,15 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Container } from "@material-ui/core";
 
 //
-
+import { Parallax } from "react-parallax";
+import bG from "./bg.svg";
 //
 const useStyles = makeStyles((theme) => ({
 	mainContainer: {
 		// backgroundColor: "#1c313a",
 		overflow: "hidden",
 		maxWidth: "80vw",
+		minWidth: "100vw",
 	},
 	timeLine: {
 		position: "relative",
@@ -126,124 +128,142 @@ const useStyles = makeStyles((theme) => ({
 const Resume = () => {
 	const classes = useStyles();
 	return (
-		<Container className={classes.mainContainer} id="resume">
-			<Typography variant="h4" align="center" className={classes.heading}>
-				<Typed strings={["Work History"]} typeSpeed={40} />
-			</Typography>
-
-			<Box component="div" className={classes.timeLine}>
-				<Typography
-					variant="h2"
-					className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-				>
-					2020-Present
+		<Parallax bgImage={bG} strength={700}>
+			<Container className={classes.mainContainer} id="resume">
+				<Typography variant="h4" align="center" className={classes.heading}>
+					<Typed strings={["Work History"]} typeSpeed={40} />
 				</Typography>
-				<Box component="div" className={classes.timeLineItem}>
-					<Typography
-						variant="h5"
-						align="center"
-						className={classes.subHeading}
-					>
-						Electronics Department Associate
-					</Typography>
-					<Typography variant="body1" align="center" className={classes.body1}>
-						Fred Meyer | Sandy, OR
-					</Typography>
-					<Typography
-						variant="subtitle1"
-						align="center"
-						className={classes.subtitle1}
-					>
-						- Provide detailed information about electronic products to
-						customers
-						<br /> - Answer customer calls; perform cashier functions <br /> -
-						Maintain awareness of overstock/understock conditions to maintain
-						ordering system integrity <br /> - Perform inventory control
-						functions
-					</Typography>
-				</Box>
 
-				<Box component="div" className={classes.timeLineItem}>
+				<Box component="div" className={classes.timeLine}>
 					<Typography
-						variant="h5"
-						align="center"
-						className={classes.subHeading}
+						variant="h2"
+						className={`${classes.timeLineYear} ${classes.timeLineItem}`}
 					>
-						Garden Center Associate
+						2020-Present
 					</Typography>
-					<Typography variant="body1" align="center" className={classes.body1}>
-						Fred Meyer | Sandy, OR
-					</Typography>
-					<Typography
-						variant="subtitle1"
-						align="center"
-						className={classes.subtitle1}
-					>
-						- Maintain the Garden Center hardlines <br /> - Maintain
-						outdoor/indoor live plants merchandise displays: water, groom,
-						prune, and ERB <br /> - Perform housekeeping functions to maintain
-						shopability and customer safety <br /> - Provide information and
-						sell plants and products
-					</Typography>
-				</Box>
+					<Box component="div" className={classes.timeLineItem}>
+						<Typography
+							variant="h5"
+							align="center"
+							className={classes.subHeading}
+						>
+							Electronics Department Associate
+						</Typography>
+						<Typography
+							variant="body1"
+							align="center"
+							className={classes.body1}
+						>
+							Fred Meyer | Sandy, OR
+						</Typography>
+						<Typography
+							variant="subtitle1"
+							align="center"
+							className={classes.subtitle1}
+						>
+							- Provide detailed information about electronic products to
+							customers
+							<br /> - Answer customer calls; perform cashier functions <br /> -
+							Maintain awareness of overstock/understock conditions to maintain
+							ordering system integrity <br /> - Perform inventory control
+							functions
+						</Typography>
+					</Box>
 
-				<Typography
-					variant="h2"
-					className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-				>
-					2016-2019
-				</Typography>
-				<Box component="div" className={classes.timeLineItem}>
+					<Box component="div" className={classes.timeLineItem}>
+						<Typography
+							variant="h5"
+							align="center"
+							className={classes.subHeading}
+						>
+							Garden Center Associate
+						</Typography>
+						<Typography
+							variant="body1"
+							align="center"
+							className={classes.body1}
+						>
+							Fred Meyer | Sandy, OR
+						</Typography>
+						<Typography
+							variant="subtitle1"
+							align="center"
+							className={classes.subtitle1}
+						>
+							- Maintain the Garden Center hardlines <br /> - Maintain
+							outdoor/indoor live plants merchandise displays: water, groom,
+							prune, and ERB <br /> - Perform housekeeping functions to maintain
+							shopability and customer safety <br /> - Provide information and
+							sell plants and products
+						</Typography>
+					</Box>
+
 					<Typography
-						variant="h5"
-						align="center"
-						className={classes.subHeading}
+						variant="h2"
+						className={`${classes.timeLineYear} ${classes.timeLineItem}`}
 					>
-						Games & Tech SEO News Writer
+						2016-2019
 					</Typography>
-					<Typography variant="body1" align="center" className={classes.body1}>
-						Freelance
-					</Typography>
+					<Box component="div" className={classes.timeLineItem}>
+						<Typography
+							variant="h5"
+							align="center"
+							className={classes.subHeading}
+						>
+							Games & Tech SEO News Writer
+						</Typography>
+						<Typography
+							variant="body1"
+							align="center"
+							className={classes.body1}
+						>
+							Freelance
+						</Typography>
+						<Typography
+							variant="subtitle1"
+							align="center"
+							className={classes.subtitle1}
+						>
+							- Write SEO news articles and blog posts about gaming and
+							technology for news websites raking thousands of views a day
+						</Typography>
+					</Box>
 					<Typography
-						variant="subtitle1"
-						align="center"
-						className={classes.subtitle1}
+						variant="h2"
+						className={`${classes.timeLineYear} ${classes.timeLineItem}`}
 					>
-						- Write SEO news articles and blog posts about gaming and technology
-						for news websites raking thousands of views a day
+						2014-2015
 					</Typography>
+					<Box component="div" className={classes.timeLineItem}>
+						<Typography
+							variant="h5"
+							align="center"
+							className={classes.subHeading}
+						>
+							News Writer-Researcher
+						</Typography>
+						<Typography
+							variant="body1"
+							align="center"
+							className={classes.body1}
+						>
+							Province of Dinagat Islands - Provincial Information Office
+						</Typography>
+						<Typography
+							variant="subtitle1"
+							align="center"
+							className={classes.subtitle1}
+						>
+							- Write three daily news articles for provincial government press
+							release <br /> - Research news-worthy topics, cover events,
+							interview political personalities and government workers <br /> -
+							Responsible for all the news articles in the quarterly provincial
+							government newspaper
+						</Typography>
+					</Box>
 				</Box>
-				<Typography
-					variant="h2"
-					className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-				>
-					2014-2015
-				</Typography>
-				<Box component="div" className={classes.timeLineItem}>
-					<Typography
-						variant="h5"
-						align="center"
-						className={classes.subHeading}
-					>
-						News Writer-Researcher
-					</Typography>
-					<Typography variant="body1" align="center" className={classes.body1}>
-						Province of Dinagat Islands - Provincial Information Office
-					</Typography>
-					<Typography
-						variant="subtitle1"
-						align="center"
-						className={classes.subtitle1}
-					>
-						- Write three daily news articles for provincial government press
-						release <br /> - Research news-worthy topics, cover events,
-						interview political personalities and government workers <br /> -
-						Responsible for all the news articles in the quarterly provincial
-						government newspaper
-					</Typography>
-				</Box>
-			</Box>
-		</Container>
+			</Container>
+		</Parallax>
 	);
 };
 

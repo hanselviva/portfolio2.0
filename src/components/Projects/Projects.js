@@ -12,20 +12,22 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Box from "@material-ui/core/Box";
+//
+import { Parallax } from "react-parallax";
+//
+//
 
 const projects = [
 	{
-		name: "Make-your-own Pizza",
-		image:
-			"https://cdn.pixabay.com/photo/2017/12/05/20/10/pizza-3000285_960_720.png",
+		name: "React Portfolio",
+		image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
 		description:
-			"This is my first ever functioning web app deployed which is focus on React fundamentals and JS functions. This is complete from Form Management and Validation to routing, post requests, and even cypress testing. The basic styling is added for comprehensibility purposes.",
+			"this.portfolio is a highly responsive website built with React.js, Material-UI and react-parallax.",
 		role: "Personal Project",
-
-		demo: "https://gallant-hopper-0e9073.netlify.app/",
-		code: "https://github.com/hanselviva/pizza-eats",
+		demo: "https://hansel.xyz",
+		code: "https://github.com/hanselviva/portfolio",
 	},
+
 	{
 		name: "Water My Plants",
 		image:
@@ -37,13 +39,15 @@ const projects = [
 		code: "https://github.com/Build-Week-Water-My-Plants-157",
 	},
 	{
-		name: "React Portfolio",
+		name: "Make-your-own Pizza",
 		image:
-			"https://cdn.pixabay.com/photo/2017/05/12/15/16/hexagon-2307348_960_720.png",
-		description: "this.portfolio is built with React.js and Material-UI",
+			"https://cdn.pixabay.com/photo/2017/12/05/20/10/pizza-3000285_960_720.png",
+		description:
+			"This is my first ever functioning web app deployed which is focus on React fundamentals and JS functions. This is complete from Form Management and Validation to routing, post requests, and even cypress testing. The basic styling is added for comprehensibility purposes.",
 		role: "Personal Project",
-		demo: "https://hansel.xyz",
-		code: "https://github.com/hanselviva/portfolio",
+
+		demo: "https://gallant-hopper-0e9073.netlify.app/",
+		code: "https://github.com/hanselviva/pizza-eats",
 	},
 ];
 
@@ -53,9 +57,16 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		textAlign: "center",
 		paddingTop: "10%",
-		maxWidth: "70vw",
+		minWidth: "90vw",
+		alignItems: "center",
+		justifyContent: "center",
 	},
 	mainContainer: {
+		display: "flex",
+		flexDirection: "column",
+		textAlign: "center",
+		alignItems: "center",
+		justifyContent: "center",
 		paddingBottom: "5%",
 	},
 	title: {
@@ -72,16 +83,13 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		flexDirection: "row",
 	},
-	cardContainer: {
-		maxWidth: "30%",
-	},
 	card: {
-		height: "100%",
 		display: "flex",
 		flexDirection: "column",
-		background: "rgba(225, 225, 225, 0.4)",
+		justifyContent: "space-around",
 		color: "white",
 		padding: theme.spacing(4),
+		minHeight: "70vh",
 	},
 	cardMedia: {
 		paddingTop: "56.25%", // 16:9
@@ -101,39 +109,57 @@ const Projects = () => {
 					<Typed strings={["PROJECTS"]} typeSpeed={40} />
 				</Typography>
 
-				<Container className={classes.cardGrid} maxWidth="md">
-					<Grid container spacing={4}>
-						{projects.map((card, i) => (
-							<Grid item key={i} md={6}>
-								<Card className={classes.card}>
-									<CardMedia className={classes.cardMedia} image={card.image} />
-									<CardContent className={classes.cardContent}>
-										<Typography gutterBottom variant="h5" component="h2">
-											{card.name}
-										</Typography>
-										<Typography>
-											<b> Role: </b> {card.role} <br />
-											<b> Description: </b> {card.description}
-										</Typography>
-									</CardContent>
-									<CardActions>
-										<a rel="noreferrer" target="_blank" href={card.demo}>
-											<Button size="small" color="primary" variant="outlined">
-												Demo
-											</Button>
-										</a>
+				<Grid container spacing={4} className={classes.cardGrid} maxWidth="md">
+					{projects.map((card, i) => (
+						<Grid item key={i} md={4} className={classes.cardWrapper}>
+							<Parallax
+								renderLayer={(percentage) => (
+									<Card
+										className={classes.card}
+										style={{
+											background: `rgba(58, 102, 120, ${percentage * 1})`,
+										}}
+									>
+										<CardMedia
+											className={classes.cardMedia}
+											image={card.image}
+										/>
+										<CardContent className={classes.cardContent}>
+											<Typography gutterBottom variant="h5" component="h2">
+												{card.name}
+											</Typography>
+											<Typography>
+												<b> Role: </b> {card.role} <br />
+												<b> Description: </b> {card.description}
+											</Typography>
+										</CardContent>
+										<CardActions>
+											<a rel="noreferrer" target="_blank" href={card.demo}>
+												<Button
+													size="small"
+													color="primary"
+													variant="contained"
+												>
+													Demo
+												</Button>
+											</a>
 
-										<a rel="noreferrer" target="_blank" href={card.code}>
-											<Button size="small" color="primary" variant="outlined">
-												View Code
-											</Button>
-										</a>
-									</CardActions>
-								</Card>
-							</Grid>
-						))}
-					</Grid>
-				</Container>
+											<a rel="noreferrer" target="_blank" href={card.code}>
+												<Button
+													size="small"
+													color="primary"
+													variant="contained"
+												>
+													View Code
+												</Button>
+											</a>
+										</CardActions>
+									</Card>
+								)}
+							></Parallax>
+						</Grid>
+					))}
+				</Grid>
 			</Container>
 		</Container>
 	);

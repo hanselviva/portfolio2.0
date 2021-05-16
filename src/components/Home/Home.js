@@ -24,6 +24,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 const useStyles = makeStyles((theme) => ({
 	homeWrapper: {
 		// backgroundColor: "#000a12",
+		minWidth: "90vw",
 	},
 	homeContainer: {
 		position: "absolute",
