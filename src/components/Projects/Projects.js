@@ -1,6 +1,5 @@
 import React from "react";
 import Typed from "react-typed";
-import { Link } from "react-router-dom";
 //
 //
 
@@ -53,8 +52,7 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		textAlign: "center",
 		// backgroundColor: "#29434e",
-		height: "auto",
-		paddingTop: "5%",
+		paddingTop: "10%",
 	},
 	title: {
 		color: theme.palette.secondary.light,
@@ -99,11 +97,6 @@ const Projects = () => {
 					<Typed strings={["PROJECTS"]} typeSpeed={40} />
 				</Typography>
 
-				{/* <Typography className={classes.content} variant="h6">
-					I built/helped build the following:
-				</Typography> */}
-
-				{/* Mother Container */}
 				<Container className={classes.cardGrid} maxWidth="md">
 					<Grid container spacing={4}>
 						{projects.map((card, i) => (

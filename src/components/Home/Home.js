@@ -1,7 +1,6 @@
 import React from "react";
 import avatar from "./avatar.jpg";
 import Typed from "react-typed";
-import { Link } from "react-router-dom";
 
 //
 //
@@ -61,7 +60,6 @@ const Home = () => {
 			className={classes.homeWrapper}
 			style={{
 				position: "relative",
-				overflow: "scroll",
 				backgroundRepeat: "repeat",
 				overflow: "hidden",
 			}}

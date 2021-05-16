@@ -1,19 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Typed from "react-typed";
 
 //
 //
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+import { Container } from "@material-ui/core";
 
+//
+//
 const useStyles = makeStyles((theme) => ({
 	mainContainer: {
 		// backgroundColor: "#1c313a",
 		overflow: "hidden",
+		maxWidth: "80vw",
 	},
 	timeLine: {
 		position: "relative",
@@ -113,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.primary.light,
 	},
 	subtitle1: {
-		color: theme.palette.secondary.main,
+		color: "white",
 	},
 	links: {
 		marginTop: theme.spacing(6),
@@ -124,7 +125,7 @@ const useStyles = makeStyles((theme) => ({
 const Resume = () => {
 	const classes = useStyles();
 	return (
-		<Box className={classes.mainContainer} id="resume">
+		<Container className={classes.mainContainer} id="resume">
 			<Typography variant="h4" align="center" className={classes.heading}>
 				<Typed strings={["Work History"]} typeSpeed={40} />
 			</Typography>
@@ -259,7 +260,7 @@ const Resume = () => {
 					</Link>
 				</Grid>
 			</Grid> */}
-		</Box>
+		</Container>
 	);
 };
 
