@@ -47,16 +47,20 @@ const projects = [
 ];
 
 const useStyles = makeStyles((theme) => ({
-	mainContainer: {
+	wrapper: {
 		height: "auto",
 		display: "flex",
 		textAlign: "center",
-		// backgroundColor: "#29434e",
 		paddingTop: "10%",
+		maxWidth: "70vw",
+	},
+	mainContainer: {
+		background: `rgba(1, 11, 19, 0.9)`,
+		paddingBottom: "5%",
 	},
 	title: {
 		color: theme.palette.secondary.light,
-		padding: theme.spacing(1),
+		paddingTop: theme.spacing(4),
 	},
 	content: {
 		color: theme.palette.secondary.main,
@@ -91,8 +95,8 @@ const useStyles = makeStyles((theme) => ({
 const Projects = () => {
 	const classes = useStyles();
 	return (
-		<Box className={classes.mainContainer} id="projects">
-			<Container maxWidth="lg">
+		<Container className={classes.wrapper} id="projects">
+			<Container className={classes.mainContainer}>
 				<Typography className={classes.title} variant="h4">
 					<Typed strings={["PROJECTS"]} typeSpeed={40} />
 				</Typography>
@@ -130,26 +134,8 @@ const Projects = () => {
 						))}
 					</Grid>
 				</Container>
-
-				{/* <Grid className={classes.links} container spacing={2} justify="center">
-					<Grid item>
-						<Link to="/">
-							<Button variant="contained" color="primary">
-								Back to Home
-							</Button>
-						</Link>
-					</Grid>
-
-					<Grid item>
-						<Link to="/contact">
-							<Button variant="contained" color="primary">
-								Contact Me
-							</Button>
-						</Link>
-					</Grid>
-				</Grid> */}
 			</Container>
-		</Box>
+		</Container>
 	);
 };
 

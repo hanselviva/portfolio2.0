@@ -13,15 +13,19 @@ import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
 	wrapper: {
-		// backgroundColor: "#102027",
 		height: "100vh",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
 	},
 	mainContainer: {
-		maxWidth: "50%",
+		background: `rgba(1, 11, 19, 0.9)`,
 		color: theme.palette.secondary.main,
+		// color: "white",
+		maxWidth: "50vw",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
 	},
 	title: {
 		color: theme.palette.secondary.light,
@@ -49,23 +53,6 @@ const About = () => {
 					{aboutMe.tools[0]} <br />
 					{aboutMe.tools[1]} <br /> <br />
 				</Typography>
-
-				{/* <Grid className={classes.links} container spacing={2} justify="center">
-					<Grid item>
-						<Link to="/">
-							<Button variant="contained" color="primary">
-								Back to Home
-							</Button>
-						</Link>
-					</Grid>
-					<Grid item>
-						<Link to="/resume">
-							<Button variant="contained" color="primary">
-								View Resume
-							</Button>
-						</Link>
-					</Grid>
-				</Grid> */}
 			</Container>
 		</Box>
 	);

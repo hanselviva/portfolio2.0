@@ -10,17 +10,23 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import VerticalAlignTopIcon from "@material-ui/icons/VerticalAlignTop";
+import { Parallax } from "react-parallax";
 
 const useStyles = makeStyles((theme) => ({
-	mainContainer: {
-		// backgroundColor: "#34515e",
+	wrapper: {
 		height: "100vh",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
 	},
+	mainContainer: {
+		// backgroundColor: "#34515e",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+	},
 	title: {
-		color: theme.palette.secondary.light,
+		// color: theme.palette.secondary.light,
 		padding: theme.spacing(1),
 	},
 	content: {
@@ -41,36 +47,61 @@ const useStyles = makeStyles((theme) => ({
 const ContactTemp = () => {
 	const classes = useStyles();
 	return (
-		<Box className={classes.mainContainer} id="contactTemp">
-			<Container maxWidth="lg">
-				<Typography className={classes.title} variant="h4">
-					<Typed strings={["CONTACT"]} typeSpeed={40} />
-				</Typography>
-
-				<Container>
-					<Typography className={classes.title} variant="h6">
-						Let's work together! Email me at: <br />
-						<a
-							rel="noreferrer"
-							target="_blank"
-							href="mailto:hanselviva@gmail.com"
+		<Box className={classes.wrapper}>
+			<div id="contact" />
+			<Parallax
+				renderLayer={(percentage) => (
+					<div>
+						<Container
+							className={classes.mainContainer}
+							style={{
+								background: `rgba(1, 11, 19, ${percentage * 1})`,
+								borderRadius: "50%",
+								width: percentage * 700,
+								height: percentage * 700,
+							}}
 						>
-							hanselviva@gmail.com{" "}
-						</a>
-					</Typography>
-				</Container>
+							<div
+								style={{
+									color: `rgba(255, 255, 255, ${percentage * 1})`,
+								}}
+							>
+								<Typography className={classes.title} variant="h4">
+									<Typed strings={["CONTACT"]} typeSpeed={40} />
+								</Typography>
 
-				<Grid className={classes.links} container spacing={2} justify="center">
-					<Grid item>
-						<a href="#home">
-							<Button variant="contained" color="primary">
-								<VerticalAlignTopIcon />
-								Back to top
-							</Button>
-						</a>
-					</Grid>
-				</Grid>
-			</Container>
+								<Typography className={classes.title} variant="h6">
+									Let's work together! Email me at: <br />
+									<a
+										rel="noreferrer"
+										target="_blank"
+										href="mailto:hanselviva@gmail.com"
+										style={{ color: `rgba(255, 235, 205, ${percentage * 1})` }}
+									>
+										hanselviva@gmail.com{" "}
+									</a>
+								</Typography>
+							</div>
+
+							<Grid
+								className={classes.links}
+								container
+								spacing={2}
+								justify="center"
+							>
+								<Grid item>
+									<a href="#home">
+										<Button variant="contained" color="primary">
+											<VerticalAlignTopIcon />
+											Back to top
+										</Button>
+									</a>
+								</Grid>
+							</Grid>
+						</Container>
+					</div>
+				)}
+			></Parallax>
 		</Box>
 	);
 };

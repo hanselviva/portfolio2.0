@@ -9,12 +9,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Container } from "@material-ui/core";
 
 //
+
 //
 const useStyles = makeStyles((theme) => ({
 	mainContainer: {
 		// backgroundColor: "#1c313a",
 		overflow: "hidden",
 		maxWidth: "80vw",
+		background: `rgba(1, 11, 19, 0.9)`,
 	},
 	timeLine: {
 		position: "relative",
@@ -242,24 +244,6 @@ const Resume = () => {
 					</Typography>
 				</Box>
 			</Box>
-
-			{/* <Grid className={classes.links} container spacing={2} justify="center">
-				<Grid item>
-					<Link to="/">
-						<Button variant="contained" color="primary">
-							Back to Home
-						</Button>
-					</Link>
-				</Grid>
-
-				<Grid item>
-					<Link to="/projects">
-						<Button variant="contained" color="primary">
-							View Projects
-						</Button>
-					</Link>
-				</Grid>
-			</Grid> */}
 		</Container>
 	);
 };

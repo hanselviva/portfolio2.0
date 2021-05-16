@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
-import patternBg from "./pattern.png";
 //
 //
 import Home from "./components/Home/Home";
@@ -13,7 +12,8 @@ import ContactTemp from "./components/Contact/ContactTemp";
 //
 import CssBaseline from "@material-ui/core/CssBaseline";
 //
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
+import bg from "./bg.png";
 //
 function App() {
 	return (
@@ -21,15 +21,16 @@ function App() {
 			<BrowserRouter>
 				<div className="App">
 					<CssBaseline />
-					<Parallax bgImage={patternBg} strength={1000}>
-						<Home />
 
+					<Parallax bgImage={bg} strength={800}>
+						<Home />
 						<About />
 						<Resume />
 						<Projects />
 						<ContactTemp />
+					</Parallax>
 
-						{/* 
+					{/* 
 						<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/about" component={About} />
@@ -38,7 +39,6 @@ function App() {
 						<Route exact path="/contact" component={ContactTemp} />
 						</Switch>
 						*/}
-					</Parallax>
 				</div>
 			</BrowserRouter>
 		</React.Fragment>
