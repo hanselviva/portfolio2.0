@@ -2,11 +2,12 @@ const aboutMe = {
 	biography:
 		// "Hello, there! My name is Hansel. I grow up in a small island Southeast of the Philippines. Back then, we didn't have any technology that keeps us from playing outside. I was raised by my grandparents who were farmers at the time while my mother had to work as as laundrywoman to support us. Simply put, we couldn't afford any tech devices, appliances, or video game consoles. \n When I first touched a computer at age 11, I fell instantly love with it. The idea that a box can make a lot of difference in the world fascinated my young mind. My first PC was also my first built at age 19. That is why I wanted to be a developer. I want to contribute, in my own little way, to the technological progress of the human race.",
 
-		"Hi, there! My name is Hansel. I grow up in a small island Southeast of the Philippines. When I first touched a computer at age 11, I fell instantly love with it. The idea that a box can make a lot of difference in the world fascinated my young mind. That is why I wanted to be a developer. I want to contribute, in my own little way, to the technological progress of our generation as it changes the world into betterment, one step at a time.",
+		"Hi, there! My name is Hansel. I grow up in a small island Southeast of the Philippines. When I first touched a computer at age 11, I fell instantly love with it. The idea that a box can make a lot of difference in the world fascinated my young mind. That is why I wanted to be a developer. I want to contribute, in my own little way, to the technological progress of our generation as it changes the world into betterment.",
 
 	tools: [
 		"HTML | CSS | JavaScript | React | Git & CLI",
 		"Github | Adobe CS | SEO | CMS | Digital Marketing ",
+		"Interests: Hardware & PC Building, Video Games, Esports, Graphic Arts & Image Manipulation ",
 	],
 
 	education:

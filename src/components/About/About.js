@@ -17,7 +17,7 @@ import Box from "@material-ui/core/Box";
 import htmlImg from "./html1.png";
 import cssImg from "./css2.png";
 import jsImg from "./js2.png";
-import { Card, CardMedia, Grid } from "@material-ui/core";
+import { CardMedia } from "@material-ui/core";
 import { Parallax } from "react-parallax";
 
 const useStyles = makeStyles((theme) => ({
@@ -38,7 +38,12 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.secondary.light,
 		padding: theme.spacing(1),
 	},
-	content: {
+	aboutContent: {
+		position: "relative",
+		textAlign: "center",
+		padding: theme.spacing(3),
+	},
+	moreAbout: {
 		textAlign: "center",
 		paddingTop: theme.spacing(3),
 		paddingBottom: theme.spacing(3),
@@ -47,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		flexDirection: "row",
 		justifyContent: "center",
+		paddingTop: theme.spacing(3),
 	},
 	media: {
 		margin: theme.spacing(1),
@@ -62,9 +68,27 @@ const About = () => {
 					<Typed strings={["ABOUT"]} typeSpeed={40} />
 				</Typography>
 
-				<Typography className={classes.content} variant="h6">
-					{aboutMe.biography} <br /> <br />
-				</Typography>
+				<Parallax
+					renderLayer={(percentage) => (
+						<div>
+							<div
+								style={{
+									background: `rgba(0, 101, 120, ${percentage * 1})`,
+									position: "absolute",
+									left: "50%",
+									top: "50%",
+									transform: "translate(-50%,-50%)",
+									width: percentage * 2200,
+									height: percentage * 500,
+								}}
+							/>
+
+							<Typography className={classes.aboutContent} variant="h6">
+								{aboutMe.biography} <br /> <br />
+							</Typography>
+						</div>
+					)}
+				></Parallax>
 
 				<Parallax
 					renderLayer={(percentage) => (
@@ -103,9 +127,9 @@ const About = () => {
 					)}
 				></Parallax>
 
-				<Typography className={classes.content} variant="h6">
+				<Typography className={classes.moreAbout} variant="h6">
 					{aboutMe.tools[0]} <br />
-					{aboutMe.tools[1]} <br /> <br />
+					{aboutMe.tools[1]} <br />
 				</Typography>
 			</Container>
 		</Box>

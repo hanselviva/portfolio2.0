@@ -41,11 +41,12 @@ const useStyles = makeStyles((theme) => ({
 	},
 	title: {
 		color: theme.palette.secondary.light,
+		// color: "rgba(0,101,120,1)",
 		padding: theme.spacing(1),
+		// textTransform: "uppercase",
 	},
 	subtitle: {
 		color: theme.palette.primary.light,
-		// textTransform: "uppercase",
 	},
 	linksContainer: {
 		marginTop: theme.spacing(1),

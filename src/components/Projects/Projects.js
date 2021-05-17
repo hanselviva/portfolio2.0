@@ -25,7 +25,7 @@ const projects = [
 			"this.portfolio is a highly responsive website built with React.js, react-particles, Material-UI and react-parallax.",
 		role: "Personal Project",
 		demo: "https://hansel.xyz",
-		code: "https://github.com/hanselviva/portfolio",
+		code: "https://github.com/hanselviva/portfolio2.0",
 	},
 
 	{
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
 		height: "auto",
 		display: "flex",
 		textAlign: "center",
-		paddingTop: "10%",
+		paddingTop: theme.spacing(8),
 		minWidth: "90vw",
 		alignItems: "center",
 		justifyContent: "center",
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	title: {
 		color: theme.palette.secondary.light,
-		paddingTop: theme.spacing(4),
+		// paddingTop: theme.spacing(4),
 	},
 	links: {
 		marginTop: theme.spacing(1),
@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: "space-around",
 		color: "#cfd8dc",
 		padding: theme.spacing(4),
-		minHeight: "70vh",
+		minHeight: "67vh",
 	},
 	cardMedia: {
 		paddingTop: "56.25%", // 16:9
@@ -117,7 +117,10 @@ const Projects = () => {
 									<Card
 										className={classes.card}
 										style={{
-											background: `rgba(58, 102, 120, ${percentage * 1})`,
+											background: `rgba(
+												0,
+												${percentage * 101},
+												${percentage * 120}, ${percentage * 1})`,
 										}}
 									>
 										<CardMedia

@@ -38,14 +38,13 @@ const useStyles = makeStyles((theme) => ({
 const ContactTemp = () => {
 	const classes = useStyles();
 	return (
-		<Box className={classes.wrapper}>
-			<div id="contact" />
+		<Box className={classes.wrapper} id="contact">
 			<Parallax
 				renderLayer={(percentage) => (
 					<div>
 						<div
 							style={{
-								background: `rgba(58, 102, 120, ${percentage * 1})`,
+								background: `rgba(0, 101, 120, ${percentage * 1})`,
 								position: "absolute",
 								borderRadius: "50%",
 								left: "50%",
