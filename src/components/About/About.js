@@ -10,6 +10,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
+import { CardMedia } from "@material-ui/core";
+
 //
 //
 //
@@ -17,7 +19,6 @@ import Box from "@material-ui/core/Box";
 import htmlImg from "./html1.png";
 import cssImg from "./css2.png";
 import jsImg from "./js2.png";
-import { CardMedia } from "@material-ui/core";
 import { Parallax } from "react-parallax";
 
 const useStyles = makeStyles((theme) => ({
@@ -69,17 +70,18 @@ const About = () => {
 				</Typography>
 
 				<Parallax
+					strength={300}
 					renderLayer={(percentage) => (
 						<div>
 							<div
 								style={{
-									background: `rgba(0, 101, 120, ${percentage * 1})`,
+									background: `rgba(0, 101, 120, 1)`,
 									position: "absolute",
 									left: "50%",
 									top: "50%",
 									transform: "translate(-50%,-50%)",
-									width: percentage * 2200,
-									height: percentage * 500,
+									width: percentage * 2500,
+									height: percentage * 650,
 								}}
 							/>
 
@@ -88,7 +90,7 @@ const About = () => {
 							</Typography>
 						</div>
 					)}
-				></Parallax>
+				/>
 
 				<Parallax
 					renderLayer={(percentage) => (

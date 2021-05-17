@@ -85,7 +85,8 @@ const useStyles = makeStyles((theme) => ({
 		margin: "0 3rem 0 auto",
 		fontSize: "1.8rem",
 		color: "#fff",
-
+		// BACKGROUND PARALLAX
+		// background: theme.palette.primary.light,
 		background: "rgba(0,101,120,1)",
 		lineHeight: 1,
 		padding: "0.5rem 1rem",
@@ -118,7 +119,8 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.primary.light,
 	},
 	subtitle1: {
-		color: "white",
+		// color: "white",
+		color: theme.palette.secondary.dark,
 	},
 	links: {
 		marginTop: theme.spacing(6),
@@ -129,146 +131,143 @@ const useStyles = makeStyles((theme) => ({
 const Resume = () => {
 	const classes = useStyles();
 	return (
-		<Parallax
-			bgImage={bG}
-			strength={400}
-			renderLayer={() => (
-				<Container className={classes.mainContainer} id="resume">
-					<Typography variant="h4" align="center" className={classes.heading}>
-						<Typed strings={["Work History"]} typeSpeed={40} />
+		<Parallax bgImage={bG} strength={400}>
+			<Container className={classes.mainContainer} id="resume">
+				<Typography variant="h4" align="center" className={classes.heading}>
+					<Typed strings={["Work History"]} typeSpeed={40} />
+				</Typography>
+
+				<Box component="div" className={classes.timeLine}>
+					<Typography
+						variant="h2"
+						className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+					>
+						2020-Present
 					</Typography>
-
-					<Box component="div" className={classes.timeLine}>
+					<Box component="div" className={classes.timeLineItem}>
 						<Typography
-							variant="h2"
-							className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+							variant="h5"
+							align="center"
+							className={classes.subHeading}
 						>
-							2020-Present
+							Electronics Department Associate
 						</Typography>
-						<Box component="div" className={classes.timeLineItem}>
-							<Typography
-								variant="h5"
-								align="center"
-								className={classes.subHeading}
-							>
-								Electronics Department Associate
-							</Typography>
-							<Typography
-								variant="body1"
-								align="center"
-								className={classes.body1}
-							>
-								Fred Meyer | Sandy, OR
-							</Typography>
-							<Typography
-								variant="subtitle1"
-								align="center"
-								className={classes.subtitle1}
-							>
-								- Provide detailed information about electronic products to
-								customers
-								<br /> - Answer customer calls; perform cashier functions <br />{" "}
-								- Maintain awareness of overstock/understock conditions to
-								maintain ordering system integrity <br /> - Perform inventory
-								control functions
-							</Typography>
-						</Box>
-
-						<Box component="div" className={classes.timeLineItem}>
-							<Typography
-								variant="h5"
-								align="center"
-								className={classes.subHeading}
-							>
-								Garden Center Associate
-							</Typography>
-							<Typography
-								variant="body1"
-								align="center"
-								className={classes.body1}
-							>
-								Fred Meyer | Sandy, OR
-							</Typography>
-							<Typography
-								variant="subtitle1"
-								align="center"
-								className={classes.subtitle1}
-							>
-								- Maintain the Garden Center hardlines <br /> - Maintain
-								outdoor/indoor live plants merchandise displays: water, groom,
-								prune, and ERB <br /> - Perform housekeeping functions to
-								maintain shopability and customer safety <br /> - Provide
-								information and sell plants and products
-							</Typography>
-						</Box>
-
 						<Typography
-							variant="h2"
-							className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+							variant="body1"
+							align="center"
+							className={classes.body1}
 						>
-							2016-2019
+							Fred Meyer | Sandy, OR
 						</Typography>
-						<Box component="div" className={classes.timeLineItem}>
-							<Typography
-								variant="h5"
-								align="center"
-								className={classes.subHeading}
-							>
-								Games & Tech SEO News Writer
-							</Typography>
-							<Typography
-								variant="body1"
-								align="center"
-								className={classes.body1}
-							>
-								Freelance
-							</Typography>
-							<Typography
-								variant="subtitle1"
-								align="center"
-								className={classes.subtitle1}
-							>
-								- Write SEO news articles and blog posts about gaming and
-								technology for news websites raking thousands of views a day
-							</Typography>
-						</Box>
 						<Typography
-							variant="h2"
-							className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+							variant="subtitle1"
+							align="center"
+							className={classes.subtitle1}
 						>
-							2014-2015
+							- Provide detailed information about electronic products to
+							customers
+							<br /> - Answer customer calls; perform cashier functions <br /> -
+							Maintain awareness of overstock/understock conditions to maintain
+							ordering system integrity <br /> - Perform inventory control
+							functions
 						</Typography>
-						<Box component="div" className={classes.timeLineItem}>
-							<Typography
-								variant="h5"
-								align="center"
-								className={classes.subHeading}
-							>
-								News Writer-Researcher
-							</Typography>
-							<Typography
-								variant="body1"
-								align="center"
-								className={classes.body1}
-							>
-								Province of Dinagat Islands - Provincial Information Office
-							</Typography>
-							<Typography
-								variant="subtitle1"
-								align="center"
-								className={classes.subtitle1}
-							>
-								- Write three daily news articles for provincial government
-								press release <br /> - Research news-worthy topics, cover
-								events, interview political personalities and government workers{" "}
-								<br /> - Responsible for all the news articles in the quarterly
-								provincial government newspaper
-							</Typography>
-						</Box>
 					</Box>
-				</Container>
-			)}
-		></Parallax>
+
+					<Box component="div" className={classes.timeLineItem}>
+						<Typography
+							variant="h5"
+							align="center"
+							className={classes.subHeading}
+						>
+							Garden Center Associate
+						</Typography>
+						<Typography
+							variant="body1"
+							align="center"
+							className={classes.body1}
+						>
+							Fred Meyer | Sandy, OR
+						</Typography>
+						<Typography
+							variant="subtitle1"
+							align="center"
+							className={classes.subtitle1}
+						>
+							- Maintain the Garden Center hardlines <br /> - Maintain
+							outdoor/indoor live plants merchandise displays: water, groom,
+							prune, and ERB <br /> - Perform housekeeping functions to maintain
+							shopability and customer safety <br /> - Provide information and
+							sell plants and products
+						</Typography>
+					</Box>
+
+					<Typography
+						variant="h2"
+						className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+					>
+						2016-2019
+					</Typography>
+					<Box component="div" className={classes.timeLineItem}>
+						<Typography
+							variant="h5"
+							align="center"
+							className={classes.subHeading}
+						>
+							Games & Tech SEO News Writer
+						</Typography>
+						<Typography
+							variant="body1"
+							align="center"
+							className={classes.body1}
+						>
+							Freelance
+						</Typography>
+						<Typography
+							variant="subtitle1"
+							align="center"
+							className={classes.subtitle1}
+						>
+							- Write SEO news articles and blog posts about gaming and
+							technology for news websites raking thousands of views a day
+						</Typography>
+					</Box>
+					<Typography
+						variant="h2"
+						className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+					>
+						2014-2015
+					</Typography>
+					<Box component="div" className={classes.timeLineItem}>
+						<Typography
+							variant="h5"
+							align="center"
+							className={classes.subHeading}
+						>
+							News Writer-Researcher
+						</Typography>
+						<Typography
+							variant="body1"
+							align="center"
+							className={classes.body1}
+						>
+							Province of Dinagat Islands - Provincial Information Office
+						</Typography>
+						<Typography
+							variant="subtitle1"
+							align="center"
+							className={classes.subtitle1}
+						>
+							- Write three daily news articles for provincial government press
+							release <br /> - Research news-worthy topics, cover events,
+							interview political personalities and government workers <br /> -
+							Responsible for all the news articles in the quarterly provincial
+							government newspaper
+						</Typography>
+					</Box>
+				</Box>
+			</Container>
+			>
+		</Parallax>
 	);
 };
 
