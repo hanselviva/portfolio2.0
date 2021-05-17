@@ -266,7 +266,6 @@ const Resume = () => {
 					</Box>
 				</Box>
 			</Container>
-			>
 		</Parallax>
 	);
 };
