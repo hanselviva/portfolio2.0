@@ -10,7 +10,7 @@ import { Container } from "@material-ui/core";
 
 //
 import { Parallax } from "react-parallax";
-import bG from "./bg.svg";
+import bG from "./bg2.svg";
 //
 const useStyles = makeStyles((theme) => ({
 	mainContainer: {
@@ -130,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
 const Resume = () => {
 	const classes = useStyles();
 	return (
-		<Parallax className={classes.parallaxBg} bgImage={bG} strength={400}>
+		<Parallax className={classes.parallaxBg} bgImage={bG} strength={-400}>
 			<Container className={classes.mainContainer} id="resume">
 				<Typography variant="h4" align="center" className={classes.heading}>
 					<Typed strings={["Work History"]} typeSpeed={40} />
