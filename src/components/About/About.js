@@ -42,7 +42,8 @@ const useStyles = makeStyles((theme) => ({
 	aboutContent: {
 		position: "relative",
 		textAlign: "center",
-		padding: theme.spacing(3),
+		paddingTop: theme.spacing(6),
+		paddingBottom: theme.spacing(3),
 	},
 	moreAbout: {
 		textAlign: "center",
@@ -75,12 +76,14 @@ const About = () => {
 						<div>
 							<div
 								style={{
-									background: `rgba(0, 101, 120, 1)`,
+									background: `rgba(0, 101, 120, ${percentage * 1} )`,
 									position: "absolute",
 									left: "50%",
 									top: "50%",
 									transform: "translate(-50%,-50%)",
-									width: percentage * 2500,
+									width: 2500,
+									// height: 650,
+									// width: percentage * 2500,
 									height: percentage * 650,
 								}}
 							/>

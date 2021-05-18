@@ -16,8 +16,7 @@ const useStyles = makeStyles((theme) => ({
 	mainContainer: {
 		// backgroundColor: "#1c313a",
 		overflow: "hidden",
-		maxWidth: "80vw",
-		minWidth: "100vw",
+		width: "100vw",
 	},
 	timeLine: {
 		position: "relative",
@@ -131,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
 const Resume = () => {
 	const classes = useStyles();
 	return (
-		<Parallax bgImage={bG} strength={400}>
+		<Parallax className={classes.parallaxBg} bgImage={bG} strength={400}>
 			<Container className={classes.mainContainer} id="resume">
 				<Typography variant="h4" align="center" className={classes.heading}>
 					<Typed strings={["Work History"]} typeSpeed={40} />
@@ -205,7 +204,7 @@ const Resume = () => {
 						variant="h2"
 						className={`${classes.timeLineYear} ${classes.timeLineItem}`}
 					>
-						2016-2019
+						2016 - 2019
 					</Typography>
 					<Box component="div" className={classes.timeLineItem}>
 						<Typography
@@ -235,7 +234,7 @@ const Resume = () => {
 						variant="h2"
 						className={`${classes.timeLineYear} ${classes.timeLineItem}`}
 					>
-						2014-2015
+						2014 - 2015
 					</Typography>
 					<Box component="div" className={classes.timeLineItem}>
 						<Typography

@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	subtitle: {
 		color: theme.palette.primary.light,
+		maxWidth: "100%",
 	},
 	linksContainer: {
 		marginTop: theme.spacing(1),
@@ -85,7 +86,7 @@ const Home = () => {
 
 					<Typography className={classes.subtitle} variant="h5">
 						<Typed
-							strings={["HTML/CSS/JavaScript", "React.js", "Git/Github"]}
+							strings={["HTML", "CSS", "JavaScript", "React"]}
 							typeSpeed={40}
 							backSpeed={50}
 							loop
