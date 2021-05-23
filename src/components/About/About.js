@@ -76,8 +76,7 @@ const About = () => {
 						<div>
 							<div
 								style={{
-									background: `rgba(
-												0,
+									background: `rgba(0,
 												${percentage * 101},
 												${percentage * 120}, ${percentage * 1})`,
 									position: "absolute",

@@ -75,7 +75,6 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.secondary.light,
 		// paddingTop: theme.spacing(4),
 	},
-
 	cardGrid: {
 		paddingTop: theme.spacing(4),
 		paddingBottom: theme.spacing(4),
@@ -117,7 +116,9 @@ const Projects = () => {
 					<Typed strings={["PROJECTS"]} typeSpeed={40} />
 				</Typography>
 
-				<Grid container spacing={4} className={classes.cardGrid} maxWidth="md">
+				<Grid container spacing={4} className={classes.cardGrid}>
+					{/* <Grid container spacing={4} className={classes.cardGrid} maxWidth="md"> */}
+
 					{projects.map((card, i) => (
 						<Grid item key={i} md={4} className={classes.cardWrapper}>
 							<Parallax
