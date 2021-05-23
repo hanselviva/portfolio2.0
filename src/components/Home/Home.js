@@ -47,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	subtitle: {
 		color: theme.palette.primary.light,
-		maxWidth: "100%",
 	},
 	linksContainer: {
 		marginTop: theme.spacing(1),

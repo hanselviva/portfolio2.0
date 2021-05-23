@@ -19,15 +19,17 @@ import { Parallax } from "react-parallax";
 
 const projects = [
 	{
-		name: "React Portfolio",
-		image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+		name: "Make-your-own Pizza",
+		image:
+			"https://cdn.pixabay.com/photo/2017/12/05/20/10/pizza-3000285_960_720.png",
 		description:
-			"this.portfolio is a highly responsive website built with React.js, react-particles, Material-UI and react-parallax.",
+			"First ever functioning app I've deployed focusing JS and React fundamentals. This is complete from Form Management and Validation to routing, post requests, and even cypress testing. The basic styling is added for comprehensibility purposes.",
 		role: "Personal Project",
-		demo: "https://hansel.xyz",
-		code: "https://github.com/hanselviva/portfolio2.0",
-	},
 
+		demo: "https://gallant-hopper-0e9073.netlify.app/",
+		code: "https://github.com/hanselviva/pizza-eats",
+		tools: "React, Axios, react-router-dom, Yup, Cypress",
+	},
 	{
 		name: "Water My Plants",
 		image:
@@ -37,17 +39,17 @@ const projects = [
 		role: "Front-end, built the components with form management and validations",
 		demo: "https://water-my-plants-tt157.vercel.app/",
 		code: "https://github.com/Build-Week-Water-My-Plants-157",
+		tools: "React, Redux, Axios, Material-UI, react-router-dom, Yup ",
 	},
 	{
-		name: "Make-your-own Pizza",
-		image:
-			"https://cdn.pixabay.com/photo/2017/12/05/20/10/pizza-3000285_960_720.png",
+		name: "React Portfolio",
+		image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
 		description:
-			"This is my first ever functioning web app deployed which is focus on React fundamentals and JS functions. This is complete from Form Management and Validation to routing, post requests, and even cypress testing. The basic styling is added for comprehensibility purposes.",
+			"this.portfolio is a highly responsive website built with React.js, react-particles, Material-UI and react-parallax.",
 		role: "Personal Project",
-
-		demo: "https://gallant-hopper-0e9073.netlify.app/",
-		code: "https://github.com/hanselviva/pizza-eats",
+		demo: "https://hansel.xyz",
+		code: "https://github.com/hanselviva/portfolio2.0",
+		tools: "React, react-particles, Material-UI, react-parallax",
 	},
 ];
 
@@ -73,10 +75,7 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.secondary.light,
 		// paddingTop: theme.spacing(4),
 	},
-	links: {
-		marginTop: theme.spacing(1),
-		marginBottom: theme.spacing(10),
-	},
+
 	cardGrid: {
 		paddingTop: theme.spacing(4),
 		paddingBottom: theme.spacing(4),
@@ -97,6 +96,15 @@ const useStyles = makeStyles((theme) => ({
 	cardContent: {
 		flexGrow: 1,
 		textAlign: "left",
+		// color: theme.palette.secondary.light,
+		color: "#102027",
+	},
+	cardContentDesc: {
+		marginTop: theme.spacing(1),
+	},
+	links: {
+		marginTop: theme.spacing(1),
+		marginBottom: theme.spacing(10),
 	},
 }));
 
@@ -131,9 +139,14 @@ const Projects = () => {
 											<Typography gutterBottom variant="h5" component="h2">
 												{card.name}
 											</Typography>
-											<Typography>
+											<Typography className={classes.cardContentDesc}>
 												<b> Role: </b> {card.role} <br />
+											</Typography>
+											<Typography className={classes.cardContentDesc}>
 												<b> Description: </b> {card.description}
+											</Typography>
+											<Typography className={classes.cardContentDesc}>
+												<b> Tools: </b> {card.tools} <br />
 											</Typography>
 										</CardContent>
 										<CardActions>
