@@ -31,6 +31,15 @@ const projects = [
 		tools: "React, Axios, react-router-dom, Yup, Cypress",
 	},
 	{
+		name: "Simple React Calculator",
+		image: "https://i.ibb.co/SK38Xnj/Screenshot-5.png",
+		description: "Simple React calculator using reducers",
+		role: "Personal Project",
+		demo: "https://reducer-calculator.netlify.app/",
+		code: "https://github.com/hanselviva/react-calculator",
+		tools: "React, useReducer",
+	},
+	{
 		name: "Water My Plants",
 		image:
 			"https://cdn.pixabay.com/photo/2018/03/02/09/19/flower-marigolds-3192686_960_720.png",
@@ -95,8 +104,9 @@ const useStyles = makeStyles((theme) => ({
 	cardContent: {
 		flexGrow: 1,
 		textAlign: "left",
-		// color: theme.palette.secondary.light,
-		color: "#102027",
+		// color: "#FFEBCD",
+		color: theme.palette.secondary.main,
+		// color: "#102027",
 	},
 	cardContentDesc: {
 		marginTop: theme.spacing(1),
@@ -135,6 +145,7 @@ const Projects = () => {
 										<CardMedia
 											className={classes.cardMedia}
 											image={card.image}
+											style={{ opacity: `${percentage * 1}` }}
 										/>
 										<CardContent className={classes.cardContent}>
 											<Typography gutterBottom variant="h5" component="h2">
