@@ -30,15 +30,7 @@ const projects = [
 		code: "https://github.com/hanselviva/pizza-eats",
 		tools: "React, Axios, react-router-dom, Yup, Cypress",
 	},
-	{
-		name: "Simple React Calculator",
-		image: "https://i.ibb.co/SK38Xnj/Screenshot-5.png",
-		description: "Simple React calculator using reducers",
-		role: "Personal Project",
-		demo: "https://reducer-calculator.netlify.app/",
-		code: "https://github.com/hanselviva/react-calculator",
-		tools: "React, useReducer",
-	},
+
 	{
 		name: "Water My Plants",
 		image:
@@ -59,6 +51,15 @@ const projects = [
 		demo: "https://hansel.xyz",
 		code: "https://github.com/hanselviva/portfolio2.0",
 		tools: "React, react-particles, Material-UI, react-parallax",
+	},
+	{
+		name: "Simple React Calculator",
+		image: "https://i.ibb.co/SK38Xnj/Screenshot-5.png",
+		description: "Simple React calculator using reducers",
+		role: "Personal Project",
+		demo: "https://reducer-calculator.netlify.app/",
+		code: "https://github.com/hanselviva/react-calculator",
+		tools: "React, useReducer",
 	},
 ];
 
@@ -89,6 +90,8 @@ const useStyles = makeStyles((theme) => ({
 		paddingBottom: theme.spacing(4),
 		display: "flex",
 		flexDirection: "row",
+		justifyContent: "center",
+		alignItems: "stretch",
 	},
 	card: {
 		display: "flex",
