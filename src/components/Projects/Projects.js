@@ -23,7 +23,7 @@ const projects = [
 		image:
 			"https://cdn.pixabay.com/photo/2017/12/05/20/10/pizza-3000285_960_720.png",
 		description:
-			"First ever functioning app I've deployed focusing JS and React fundamentals. This is complete from Form Management and Validation to routing, post requests, and even cypress testing. The basic styling is added for comprehensibility purposes.",
+			"My first ever deployed app, complete from Form Management & Validation to routing, post requests, and Cypress testing. Basic styling is for comprehensibility purposes.",
 		role: "Personal Project",
 
 		demo: "https://gallant-hopper-0e9073.netlify.app/",
@@ -36,8 +36,8 @@ const projects = [
 		image:
 			"https://cdn.pixabay.com/photo/2018/03/02/09/19/flower-marigolds-3192686_960_720.png",
 		description:
-			"Built alongside a team of Lambda School Web Development students. 'Water My Plants' will remind users when it's time to water their plants. The app is complete from frontend to backend functionalities.",
-		role: "Front-end, built the components with form management and validations",
+			"Built alongside a team of Lambda School Web Development students. 'Water My Plants' reminds users to water their plants. The app is complete from frontend to backend functionalities.",
+		role: "Front-end, built the components",
 		demo: "https://water-my-plants-tt157.vercel.app/",
 		code: "https://github.com/Build-Week-Water-My-Plants-157",
 		tools: "React, Redux, Axios, Material-UI, react-router-dom, Yup ",
@@ -55,11 +55,20 @@ const projects = [
 	{
 		name: "Simple React Calculator",
 		image: "https://i.ibb.co/SK38Xnj/Screenshot-5.png",
-		description: "Simple React calculator using reducers",
+		description: "Simple React calculator using actions and reducers.",
 		role: "Personal Project",
 		demo: "https://reducer-calculator.netlify.app/",
 		code: "https://github.com/hanselviva/react-calculator",
 		tools: "React, useReducer",
+	},
+	{
+		name: "Jokes Generator",
+		image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+		description: "Simple App using react that handles async using redux-thunk.",
+		role: "Personal Project",
+		demo: "https://async-redux-chuck-norris-jokes.netlify.app/",
+		code: "https://github.com/hanselviva/react-async-redux",
+		tools: "React, Redux Thunk",
 	},
 ];
 
@@ -91,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		flexDirection: "row",
 		justifyContent: "center",
-		alignItems: "stretch",
+		alignItems: "center",
 	},
 	card: {
 		display: "flex",
@@ -99,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: "space-around",
 		color: "#cfd8dc",
 		padding: theme.spacing(4),
-		minHeight: "67vh",
+		// minHeight: "67vh",
 	},
 	cardMedia: {
 		paddingTop: "56.25%", // 16:9
