@@ -35,22 +35,11 @@ const projects = [
 		description:
 			"Built alongside a team of Lambda School WebDev students in an AGILE environment. 'Water My Plants' reminds users to water their plants. The app is complete from frontend to backend functionalities.",
 		role: "Front-end; form validation, components styling & functionalities",
-		demo: "https://water-my-plants-tt157.vercel.app/",
+		demo: "https://water-my-plants-marketing-page.netlify.app/",
 		code: "https://github.com/Build-Week-Water-My-Plants-157",
 		tools: "React, Redux, Axios, Material-UI, react-router-dom, Yup",
 	},
-	{
-		name: "Make-your-own Pizza",
-		image:
-			"https://cdn.pixabay.com/photo/2017/12/05/20/10/pizza-3000285_960_720.png",
-		description:
-			"My first ever deployment, complete Form Management from validation to routing, post requests, and Cypress testing. Basic styling is added only for comprehensibility.",
-		role: "Personal Project",
 
-		demo: "https://gallant-hopper-0e9073.netlify.app/",
-		code: "https://github.com/hanselviva/pizza-eats",
-		tools: "React, Axios, react-router-dom, Yup, Cypress",
-	},
 	{
 		name: "React Portfolio",
 		image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
@@ -62,22 +51,36 @@ const projects = [
 		tools: "React, react-particles, Material-UI, react-parallax",
 	},
 	{
+		name: "Jokes Generator",
+		image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+		description:
+			"Simple App using React that utilizes actions and reducers and handles async using redux-thunk.",
+		role: "Personal Project",
+		demo: "https://async-redux-chuck-norris-jokes.netlify.app/",
+		code: "https://github.com/hanselviva/react-async-redux",
+		tools: "React, Redux Thunk",
+	},
+	{
 		name: "Simple React Calculator",
 		image: "https://i.ibb.co/SK38Xnj/Screenshot-5.png",
-		description: "Simple React calculator using actions and reducers",
+		description:
+			"Very simple React calculator that I built instantly after learning actions and reducers.",
 		role: "Personal Project",
 		demo: "https://reducer-calculator.netlify.app/",
 		code: "https://github.com/hanselviva/react-calculator",
 		tools: "React with actions and reducers",
 	},
 	{
-		name: "Jokes Generator",
-		image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-		description: "Simple App using react that handles async using redux-thunk.",
+		name: "Make-your-own Pizza",
+		image:
+			"https://cdn.pixabay.com/photo/2017/12/05/20/10/pizza-3000285_960_720.png",
+		description:
+			"My first ever deployment, complete Form Management from validation to routing, post requests, and Cypress testing. Basic styling for comprehensibility.",
 		role: "Personal Project",
-		demo: "https://async-redux-chuck-norris-jokes.netlify.app/",
-		code: "https://github.com/hanselviva/react-async-redux",
-		tools: "React, Redux Thunk",
+
+		demo: "https://gallant-hopper-0e9073.netlify.app/",
+		code: "https://github.com/hanselviva/pizza-eats",
+		tools: "React, Axios, react-router-dom, Yup, Cypress",
 	},
 ];
 
@@ -109,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		flexDirection: "row",
 		justifyContent: "center",
-		alignItems: "center",
+		alignItems: "flex-end",
 	},
 	card: {
 		display: "flex",

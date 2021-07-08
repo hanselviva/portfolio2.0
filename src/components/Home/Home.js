@@ -85,7 +85,7 @@ const Home = () => {
 
 					<Typography className={classes.subtitle} variant="h5">
 						<Typed
-							strings={["HTML", "CSS", "JavaScript", "React"]}
+							strings={["Frontend", "Backend", "Full Stack"]}
 							typeSpeed={40}
 							backSpeed={50}
 							loop
