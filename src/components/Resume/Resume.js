@@ -163,12 +163,9 @@ const Resume = () => {
 							align="center"
 							className={classes.subtitle1}
 						>
-							- Provide detailed information about electronic products to
-							customers
+							- Provide detailed information about products to customers
 							<br /> - Answer customer calls; perform cashier functions <br /> -
-							Maintain awareness of overstock/understock conditions to maintain
-							ordering system integrity <br /> - Perform inventory control
-							functions
+							Perform inventory control functions
 						</Typography>
 					</Box>
 
@@ -192,11 +189,9 @@ const Resume = () => {
 							align="center"
 							className={classes.subtitle1}
 						>
-							- Maintain the Garden Center hardlines <br /> - Maintain
-							outdoor/indoor live plants merchandise displays: water, groom,
-							prune, and ERB <br /> - Perform housekeeping functions to maintain
-							shopability and customer safety <br /> - Provide information and
-							sell plants and products
+							- Maintain the Garden Center hardlines and live plants merchandise
+							<br /> - Perform housekeeping functions <br /> - Provide
+							information and sell plant products to customers
 						</Typography>
 					</Box>
 
@@ -256,11 +251,8 @@ const Resume = () => {
 							align="center"
 							className={classes.subtitle1}
 						>
-							- Write three daily news articles for provincial government press
-							release <br /> - Research news-worthy topics, cover events,
-							interview political personalities and government workers <br /> -
-							Responsible for all the news articles in the quarterly provincial
-							government newspaper
+							- Responsible for daily provincial government press release
+							<br />
 						</Typography>
 					</Box>
 				</Box>
