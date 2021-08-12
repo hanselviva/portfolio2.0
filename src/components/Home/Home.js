@@ -23,7 +23,6 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 
 const useStyles = makeStyles((theme) => ({
 	homeWrapper: {
-		// backgroundColor: "#000a12",
 		minWidth: "90vw",
 	},
 	homeContainer: {
@@ -41,15 +40,15 @@ const useStyles = makeStyles((theme) => ({
 	},
 	title: {
 		color: theme.palette.secondary.light,
-		// color: "rgba(0,101,120,1)",
 		padding: theme.spacing(1),
-		// textTransform: "uppercase",
+		backgroundColor: "#000a12",
 	},
 	subtitle: {
 		color: theme.palette.primary.light,
+		backgroundColor: "#000a12",
 	},
 	linksContainer: {
-		marginTop: theme.spacing(1),
+		marginTop: theme.spacing(3),
 	},
 }));
 //
@@ -80,16 +79,11 @@ const Home = () => {
 
 				<Container>
 					<Typography className={classes.title} variant="h4">
-						<Typed strings={["Hansel Valentine"]} typeSpeed={40} />
+						Hansel Valentine
 					</Typography>
 
-					<Typography className={classes.subtitle} variant="h5">
-						<Typed
-							strings={["Frontend", "Backend", "Full Stack"]}
-							typeSpeed={40}
-							backSpeed={50}
-							loop
-						/>
+					<Typography className={classes.subtitle} variant="h3">
+						<Typed strings={["Full Stack Web Developer"]} typeSpeed={20} />
 					</Typography>
 					<Grid
 						className={classes.linksContainer}
