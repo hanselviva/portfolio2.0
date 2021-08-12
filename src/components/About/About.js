@@ -71,16 +71,17 @@ const About = () => {
 									top: "50%",
 									transform: "translate(-50%,-50%)",
 									width: percentage * 2500,
-									height: percentage * 650,
+									height: percentage * 700,
 								}}
 							/>
 
 							<Typography className={classes.aboutContent} variant="h6">
-								{aboutMe.biography} <br /> <br />
-								<Typography className={classes.moreAbout} variant="h6">
-									{aboutMe.tools[0]} <br />
-									{aboutMe.tools[1]} <br />
-								</Typography>
+								{aboutMe.biography[0]} <br /> <br /> {aboutMe.biography[1]}{" "}
+								<br />
+								<br />
+								{aboutMe.biography[2]} <br />
+								{aboutMe.tools[0]} <br />
+								{aboutMe.tools[1]} <br />
 							</Typography>
 						</div>
 					)}

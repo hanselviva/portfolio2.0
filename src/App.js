@@ -22,8 +22,8 @@ function App() {
 
 					<Home />
 					<About />
-					<Resume />
 					<Projects />
+					<Resume />
 					<ContactTemp />
 				</div>
 			</BrowserRouter>

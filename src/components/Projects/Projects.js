@@ -14,75 +14,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 //
 import { Parallax } from "react-parallax";
-//
-//
-
-const projects = [
-	{
-		name: "Rent-A-Game",
-		image: "https://i.ibb.co/XpF72td/Screenshot-7.png",
-		description:
-			"A fully functional rental store built on React with Redux state management. This app has also client authentication using Axios. The database API is pulled from FreeToGame.com which I have tweaked to cater the needs of the app.",
-		role: "Personal Project",
-		demo: "https://store-app-mu.vercel.app/",
-		code: "https://github.com/hanselviva/react-async-redux",
-		tools: "React, Redux, Redux Thunk, Material-UI, more..",
-	},
-	{
-		name: "Water My Plants",
-		image:
-			"https://cdn.pixabay.com/photo/2018/03/02/09/19/flower-marigolds-3192686_960_720.png",
-		description:
-			"Built alongside a team of Lambda School WebDev students in an AGILE environment. 'Water My Plants' reminds users to water their plants. The app is complete from frontend to backend functionalities.",
-		role: "Front-end; form validation, components styling & functionalities",
-		demo: "https://water-my-plants-marketing-page.netlify.app/",
-		code: "https://github.com/Build-Week-Water-My-Plants-157",
-		tools: "React, Redux, Axios, Material-UI, react-router-dom, Yup",
-	},
-
-	{
-		name: "React Portfolio",
-		image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-		description:
-			"this.portfolio is a highly responsive website built with React.js, react-particles, Material-UI and react-parallax.",
-		role: "Personal Project",
-		demo: "https://hansel.xyz",
-		code: "https://github.com/hanselviva/portfolio2.0",
-		tools: "React, react-particles, Material-UI, react-parallax",
-	},
-	{
-		name: "Jokes Generator",
-		image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-		description:
-			"Simple App using React that utilizes actions and reducers and handles async using redux-thunk.",
-		role: "Personal Project",
-		demo: "https://async-redux-chuck-norris-jokes.netlify.app/",
-		code: "https://github.com/hanselviva/react-async-redux",
-		tools: "React, Redux Thunk",
-	},
-	{
-		name: "Simple React Calculator",
-		image: "https://i.ibb.co/SK38Xnj/Screenshot-5.png",
-		description:
-			"Very simple React calculator that I built instantly after learning actions and reducers.",
-		role: "Personal Project",
-		demo: "https://reducer-calculator.netlify.app/",
-		code: "https://github.com/hanselviva/react-calculator",
-		tools: "React with actions and reducers",
-	},
-	{
-		name: "Make-your-own Pizza",
-		image:
-			"https://cdn.pixabay.com/photo/2017/12/05/20/10/pizza-3000285_960_720.png",
-		description:
-			"My first ever deployment, complete Form Management from validation to routing, post requests, and Cypress testing. Basic styling for comprehensibility.",
-		role: "Personal Project",
-
-		demo: "https://gallant-hopper-0e9073.netlify.app/",
-		code: "https://github.com/hanselviva/pizza-eats",
-		tools: "React, Axios, react-router-dom, Yup, Cypress",
-	},
-];
+import projects from "./projectList";
 
 const useStyles = makeStyles((theme) => ({
 	wrapper: {
