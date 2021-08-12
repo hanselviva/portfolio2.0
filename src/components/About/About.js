@@ -76,12 +76,17 @@ const About = () => {
 							/>
 
 							<Typography className={classes.aboutContent} variant="h6">
-								{aboutMe.biography[0]} <br /> <br /> {aboutMe.biography[1]}{" "}
+								{aboutMe.biography[0]} <br />
 								<br />
+								{aboutMe.biography[1]} <br />
 								<br />
-								{aboutMe.biography[2]} <br />
-								{aboutMe.tools[0]} <br />
-								{aboutMe.tools[1]} <br />
+								{aboutMe.biography[2]}
+							</Typography>
+							<Typography className={classes.aboutContent} variant="h5">
+								<span style={{ color: "white" }}>
+									{aboutMe.tools[0]} <br />
+									{aboutMe.tools[1]} <br />
+								</span>
 							</Typography>
 						</div>
 					)}
