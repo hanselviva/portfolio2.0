@@ -27,7 +27,7 @@ const projects = [
 		description:
 			"this.portfolio is a highly responsive website built with React and various libraries like react-parallax, MUI, and react-particles.",
 		role: "Personal Project",
-		demo: "https://hansel.xyz",
+		demo: "#",
 		code: "https://github.com/hanselviva/portfolio2.0",
 		tools: "React",
 	},
